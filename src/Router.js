@@ -1,16 +1,15 @@
 'use strict';
 
-var React = require('react-native');
-var EventEmitter = require('event-emitter');
+import React from 'react';
+var createReactClass = require('create-react-class');
+import { Navigator, Children, createElement, InteractionManager, cloneElement } from 'react-native';
+import PropTypes from 'prop-types';
 
-var {
-  View, Navigator, Children, PropTypes, createElement, createClass,
-  InteractionManager, cloneElement
-} = React;
+var EventEmitter = require('event-emitter');
 
 var Transitions = require('./Transitions');
 
-var Router = React.createClass({
+var Router = createReactClass({
 
   displayName: 'Router',
 
@@ -307,7 +306,11 @@ var Router = React.createClass({
   },
 
   _renderScene(route, navigator) {
-    return cloneElement(route.component, route.props);
+    if (route.component.$$typeof.toString() === 'Symbol(react.element)') {
+      return cloneElement(route.component, route.props);
+    } else {
+      return createElement(route.component, route.props);
+    }
   },
 
   _configureScene(route) {

@@ -1,9 +1,10 @@
 'use strict';
 
-var React = require('react-native');
-var { StyleSheet, PropTypes } = React;
+import { StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
+var createReactClass = require('create-react-class');
 
-var Route = React.createClass({
+var Route = createReactClass({
   displayName: 'Route',
   propTypes: {
     name: PropTypes.string.isRequired,

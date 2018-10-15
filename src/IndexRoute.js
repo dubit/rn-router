@@ -1,9 +1,9 @@
 'use strict';
 
-var React = require('react-native');
-var { StyleSheet, PropTypes } = React;
+import PropTypes from 'prop-types';
+var createReactClass = require('create-react-class');
 
-var IndexRoute = React.createClass({
+var IndexRoute = createReactClass({
   displayName: 'IndexRoute',
   propTypes: {
     name: PropTypes.string.isRequired,
@@ -12,12 +12,6 @@ var IndexRoute = React.createClass({
   },
   render() {
     return this.props.children;
-  }
-});
-
-var styles = StyleSheet.create({
-  hidden: {
-    height: 0,
   }
 });
 
