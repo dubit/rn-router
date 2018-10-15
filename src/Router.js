@@ -9,6 +9,10 @@ import PropTypes from 'prop-types';
 var EventEmitter = require('event-emitter');
 var Transitions = require('./Transitions');
 
+function isFunctionComponent(component) {
+  return typeof component === 'function' && String(component).includes('return React.createElement');
+}
+
 var Router = createReactClass({
 
   displayName: 'Router',
@@ -306,7 +310,7 @@ var Router = createReactClass({
   },
 
   _renderScene(route, navigator) {
-    if (route.component.$$typeof.toString() === 'Symbol(react.element)') {
+    if (isFunctionComponent(route.component)) {
       return cloneElement(route.component, route.props);
     } else {
       return createElement(route.component, route.props);
