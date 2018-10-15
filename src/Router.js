@@ -1,13 +1,13 @@
 'use strict';
 
-import React, { Children } from 'react';
-var createReactClass = require('create-react-class');
-import { createElement, InteractionManager, cloneElement } from 'react-native';
+import React, { Children, createElement, cloneElement } from 'react';
+import { InteractionManager } from 'react-native';
 import { Navigator } from 'react-native-deprecated-custom-components';
 import PropTypes from 'prop-types';
 
 var EventEmitter = require('event-emitter');
 var Transitions = require('./Transitions');
+var createReactClass = require('create-react-class');
 
 function isFunctionComponent(component) {
   return typeof component === 'function' && String(component).includes('return React.createElement');
