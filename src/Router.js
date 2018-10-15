@@ -2,7 +2,8 @@
 
 import React, { Children } from 'react';
 var createReactClass = require('create-react-class');
-import { Navigator, createElement, InteractionManager, cloneElement } from 'react-native';
+import { createElement, InteractionManager, cloneElement } from 'react-native';
+import Navigator from 'react-native-deprecated-custom-components';
 import PropTypes from 'prop-types';
 
 var EventEmitter = require('event-emitter');

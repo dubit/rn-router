@@ -28,8 +28,12 @@
   },
   "homepage": "https://github.com/jcgertig/rn-router",
   "peerDependencies": {
+    "event-emitter": ">=0.3.4",
     "react-native": ">=0.14.0",
-    "event-emitter": ">=0.3.4"
+    "prop-types": ">=15.6.2",
+    "react-native-deprecated-custom-components": ">=0.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-native-swiper": "^1.5.13"
+  }
 }
