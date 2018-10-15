@@ -1,8 +1,8 @@
 'use strict';
 
-import React from 'react';
+import React, { Children } from 'react';
 var createReactClass = require('create-react-class');
-import { Navigator, Children, createElement, InteractionManager, cloneElement } from 'react-native';
+import { Navigator, createElement, InteractionManager, cloneElement } from 'react-native';
 import PropTypes from 'prop-types';
 
 var EventEmitter = require('event-emitter');
