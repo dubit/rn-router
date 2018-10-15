@@ -3,11 +3,10 @@
 import React, { Children } from 'react';
 var createReactClass = require('create-react-class');
 import { createElement, InteractionManager, cloneElement } from 'react-native';
-import Navigator from 'react-native-deprecated-custom-components';
+import { Navigator } from 'react-native-deprecated-custom-components';
 import PropTypes from 'prop-types';
 
 var EventEmitter = require('event-emitter');
-
 var Transitions = require('./Transitions');
 
 var Router = createReactClass({
